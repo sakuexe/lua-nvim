@@ -53,6 +53,8 @@ return packer.startup(function(use)
 	use("nvim-lualine/lualine.nvim")
 
 	-- Fuzzy finding with telescope
+	use({ "nvim-telescope/telescope-fzf-native.nvim", run = "make" }) -- dependency for fuzzy finder
+	use({ "nvim-telescope/telescope.nvim", branch = "0.1.x" })
 
 	-- Autocompletion
 	use("hrsh7th/nvim-cmp")
@@ -80,6 +82,20 @@ return packer.startup(function(use)
 	use("jayp0521/mason-null-ls.nvim")
 
 	-- treesitter
+	use({
+		"nvim-treesitter/nvim-treesitter",
+		run = function()
+			local ts_update = require("nvim-treesitter.install").update({ with_sync = true })
+			ts_update()
+		end,
+	})
+
+	-- auto closing
+	use("windwp/nvim-autopairs")
+	use("windwp/nvim-ts-autotag")
+
+	-- git-signs plugin
+	use("lewis6991/gitsigns.nvim")
 
 	if packer_bootstrap then
 		require("packer").sync()

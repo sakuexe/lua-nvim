@@ -7,8 +7,8 @@ local xnoremap = require("sakuexe.core.keymaphelp").xnoremap
 vim.g.mapleader = " "
 
 -- Exit insert mode without pressing CTRL-CEscape
-inoremap("kj","<Esc>")
-inoremap("jk","<Esc>")
+inoremap("kj", "<Esc>")
+inoremap("jk", "<Esc>")
 
 -- Remove search highlighting with CTRL-N
 nnoremap("<Leader>nh", ":nohlsearch<CR>")
@@ -34,8 +34,8 @@ vnoremap("<", "<gv")
 vnoremap(">", ">gv")
 
 -- Incredible keymaps, pastes and removes text without putting it in clipboard
-xnoremap("<leader>p", "\"_dP")
-nnoremap("x", "\"_x")
+xnoremap("<leader>p", '"_dP')
+nnoremap("x", '"_x')
 
 -- Increases/Decreases numbers incrementally
 nnoremap("<leader>+", "<C-a>")
@@ -50,7 +50,14 @@ nnoremap("<leader>sx", ":close<CR>") -- close current split
 -- Buffer stuff
 nnoremap("<leader>bd", ":bd<CR>")
 
--- Plugin keymaps
+-- <[ Plugin Keymaps ]> --
 
 -- Nvim-tree
 nnoremap("<leader>e", ":NvimTreeToggle<CR>")
+
+-- Telescope
+vim.keymap.set("n", "<leader>ff", "<cmd>Telescope find_files<CR>")
+vim.keymap.set("n", "<leader>fg", "<cmd>Telescope live_grep<CR>")
+vim.keymap.set("n", "<leader>fc", "<cmd>Telescope grep_string<CR>")
+vim.keymap.set("n", "<leader>fb", "<cmd>Telescope buffers<CR>")
+vim.keymap.set("n", "<leader>fh", "<cmd>Telescope help_tags<CR>")
