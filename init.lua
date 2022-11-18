@@ -8,3 +8,5 @@ require("sakuexe.plugins.nvim-cmp")
 require("sakuexe.plugins.lsp.mason")
 require("sakuexe.plugins.lsp.lspsaga")
 require("sakuexe.plugins.lsp.lspconfig")
+
+require("sakuexe.plugins.lsp.null-ls")
