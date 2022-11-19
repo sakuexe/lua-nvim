@@ -17,14 +17,17 @@ local my_colors = {
 	green = "#63bf50",
 	turqoise = "#35dbba",
 	black = "#000000",
-	white = "#ffffff",
+	white = "#dedede",
 	darkgray = "#2e2c30",
+	lightgray = "#626063",
+	transparent = "00000000",
 }
 
 lualine_ayu.normal.a.bg = my_colors.orange
 lualine_ayu.insert.a.bg = my_colors.lavender
 lualine_ayu.visual.a.bg = my_colors.violet
 lualine_ayu.replace.a.bg = my_colors.red
+lualine_ayu.normal.c.bg = my_colors.transparent
 
 lualine_ayu.command = {
 	a = {
@@ -39,16 +42,15 @@ lualine.setup({
 		theme = lualine_ayu,
 		component_separators = { left = "", right = "" },
 		section_separators = { left = "", right = "" },
-		--  
+		--    
 	},
 
 	sections = {
 		lualine_a = { "mode" },
-		-- lualine_b = { "branch", "diff", "diagnostics" }
-		lualine_b = { "branch", "diagnostics" },
-		lualine_c = { "buffers" },
+		lualine_b = { "branch", "diff", "diagnostics" },
+		lualine_c = {},
 		lualine_x = { "encoding", "fileformat", "filetype" },
-		lualine_y = { "filename" },
+		lualine_y = {},
 		lualine_z = { "location" },
 	},
 
@@ -66,8 +68,8 @@ lualine.setup({
 			{
 				"buffers",
 				buffers_color = {
-					active = { bg = my_colors.black, fg = my_colors.lavender },
-					inactive = { bg = my_colors.black, fg = my_colors.darkgray },
+					active = { bg = my_colors.darkgray, fg = my_colors.white },
+					inactive = { bg = my_colors.black, fg = my_colors.lightgray },
 				},
 			},
 		},
