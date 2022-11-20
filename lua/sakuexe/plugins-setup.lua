@@ -35,36 +35,36 @@ return packer.startup(function(use)
 	use("nvim-lua/plenary.nvim")
 
 	-- Colorschemes
-	use("phanviet/vim-monokai-pro")
 	use("Shatur/neovim-ayu")
-	use("tribela/vim-transparent")
+	use("phanviet/vim-monokai-pro")
+	use("whatsthatsmell/codesmell_dark.vim")
+	use("xiyaowong/nvim-transparent")
 
 	-- Essential nvim plugins
 	use("tpope/vim-surround") -- ysw & csw
 	use("tpope/vim-commentary") -- gc
 
+	-- auto closing
+	use("windwp/nvim-autopairs")
+	use("windwp/nvim-ts-autotag")
+
 	-- File explorer
 	use("nvim-tree/nvim-tree.lua")
-
-	-- Icons
-	use("nvim-tree/nvim-web-devicons")
-
-	-- Statusline
-	use("nvim-lualine/lualine.nvim")
 
 	-- Fuzzy finding with telescope
 	use({ "nvim-telescope/telescope-fzf-native.nvim", run = "make" }) -- dependency for fuzzy finder
 	use({ "nvim-telescope/telescope.nvim", branch = "0.1.x" })
 
+	-- Statusline
+	use("nvim-lualine/lualine.nvim")
+
+	-- Icons
+	use("nvim-tree/nvim-web-devicons")
+
 	-- Autocompletion
 	use("hrsh7th/nvim-cmp")
 	use("hrsh7th/cmp-buffer")
 	use("hrsh7th/cmp-path")
-
-	-- Snippets
-	use("L3MON4D3/LuaSnip")
-	use("saadparwaiz1/cmp_luasnip")
-	use("rafamadriz/friendly-snippets")
 
 	-- Managing and installing LSP servers, linters and formatters
 	use("williamboman/mason.nvim")
@@ -81,6 +81,11 @@ return packer.startup(function(use)
 	use("jose-elias-alvarez/null-ls.nvim")
 	use("jayp0521/mason-null-ls.nvim")
 
+	-- Snippets
+	use("L3MON4D3/LuaSnip")
+	use("saadparwaiz1/cmp_luasnip")
+	use("rafamadriz/friendly-snippets")
+
 	-- treesitter
 	use({
 		"nvim-treesitter/nvim-treesitter",
@@ -89,10 +94,6 @@ return packer.startup(function(use)
 			ts_update()
 		end,
 	})
-
-	-- auto closing
-	use("windwp/nvim-autopairs")
-	use("windwp/nvim-ts-autotag")
 
 	-- git-signs plugin
 	use("lewis6991/gitsigns.nvim")
