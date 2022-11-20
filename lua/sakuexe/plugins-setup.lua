@@ -98,6 +98,15 @@ return packer.startup(function(use)
 	-- git-signs plugin
 	use("lewis6991/gitsigns.nvim")
 
+	-- Better terminal for Neovim
+	use({
+		"akinsho/toggleterm.nvim",
+		tag = "*",
+		config = function()
+			require("toggleterm").setup()
+		end,
+	})
+
 	if packer_bootstrap then
 		require("packer").sync()
 	end

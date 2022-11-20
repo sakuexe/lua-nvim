@@ -2,6 +2,7 @@ local nnoremap = require("sakuexe.core.keymaphelp").nnoremap
 local inoremap = require("sakuexe.core.keymaphelp").inoremap
 local vnoremap = require("sakuexe.core.keymaphelp").vnoremap
 local xnoremap = require("sakuexe.core.keymaphelp").xnoremap
+local tnoremap = require("sakuexe.core.keymaphelp").tnoremap
 
 -- Assign <Leader> key
 vim.g.mapleader = " "
@@ -56,8 +57,13 @@ nnoremap("<leader>bd", ":bd<CR>")
 nnoremap("<leader>e", ":NvimTreeToggle<CR>")
 
 -- Telescope
-vim.keymap.set("n", "<leader>ff", "<cmd>Telescope find_files<CR>")
-vim.keymap.set("n", "<leader>fg", "<cmd>Telescope live_grep<CR>")
-vim.keymap.set("n", "<leader>fc", "<cmd>Telescope grep_string<CR>")
-vim.keymap.set("n", "<leader>fb", "<cmd>Telescope buffers<CR>")
-vim.keymap.set("n", "<leader>fh", "<cmd>Telescope help_tags<CR>")
+nnoremap("<leader>ff", ":Telescope find_files<CR>")
+nnoremap("<leader>fg", ":Telescope live_grep<CR>")
+nnoremap("<leader>fc", ":Telescope grep_string<CR>")
+nnoremap("<leader>fb", ":Telescope buffers<CR>")
+nnoremap("<leader>fh", ":Telescope help_tags<CR>")
+
+-- ToggleTerminal
+tnoremap("<Esc>", "<C-\\><C-n>:q!<CR>") -- quit terminal
+tnoremap("<C-t>", "<C-\\><C-n>:ToggleTerm<CR>") -- exit terminal focus
+nnoremap("<C-t>", ":ToggleTerm<CR>")

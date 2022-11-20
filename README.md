@@ -127,3 +127,7 @@ mv nvim.lua nvim
 #### Git
 
 - [lewis6991/gitsigns.nvim](https://github.com/lewis6991/gitsigns.nvim) - Shows Git color-coded lines on the left side
+
+#### Integrated Terminal
+
+- [akinsho/toggleterm.nvim](https://github.com/lewis6991/gitsigns.nvim) - Better integrated terminal
