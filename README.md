@@ -21,8 +21,10 @@ Recommended Dependencies
 
 **1.) Install latest neovim appimage**
 
+[Link to latest Neovim Release](https://github.com/neovim/neovim/releases/tag/stable)
+
 ```bash
-curl -LO https://github.com/neovim/neovim/releases/latest/download/nvim.appimage
+# Download nvim.appimage from the link above
 chmod u+x nvim.appimage
 ./nvim.appimage
 ```
@@ -32,11 +34,6 @@ If ./nvim.appimage doesn't work:
 ```bash
 ./nvim.appimage --appimage-extract
 ./squashfs-root/AppRun --version
-
-# optional: expose neovim globally (to use command nvim)
-sudo mv squashfs-root /
-sudo ln -s /squashfs-root/AppRun /usr/bin/nvim
-nvim
 ```
 
 **2.) Make a directory for the config files, if not already in place**
@@ -48,9 +45,11 @@ cd ~/config
 
 **2.1.) Clone this repository and rename it to "nvim"**
 
+Inside of the .config directory
+
 ```bash
-git clone https://github.com/sakuexe/init.vim.git
-mv init.vim nvim
+git clone https://github.com/sakuexe/nvim.lua.git
+mv nvim.lua nvim
 ```
 
 ## **Plugins**
