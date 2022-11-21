@@ -65,5 +65,3 @@ nnoremap("<leader>fh", ":Telescope help_tags<CR>")
 
 -- ToggleTerminal
 tnoremap("<Esc>", "<C-\\><C-n>:q!<CR>") -- quit terminal
-tnoremap("<C-t>", "<C-\\><C-n>:ToggleTerm<CR>") -- exit terminal focus
-nnoremap("<C-t>", ":ToggleTerm<CR>")

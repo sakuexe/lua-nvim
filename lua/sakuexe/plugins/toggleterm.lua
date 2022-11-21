@@ -4,7 +4,7 @@ if not term_setup then
 end
 
 toggleterm.setup({
-	open_mapping = [[<leader>t>]],
+	open_mapping = [[<C-t>]],
 	direction = "float",
 	float_opts = {
 		border = "curved",
