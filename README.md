@@ -82,7 +82,7 @@ mv nvim.lua nvim
 - [tpope/vim-commentary](https://github.com/tpope/vim-commentary) - "gc" or "gcc"
 - [windwp/nvim-utopairs](https://github.com/windwp/nvim-autopairs)
 - [windwp/nvim-ts-autotag](https://github.com/windwp/nvim-ts-autotag)
-- [Pocco81/auto-save.nvim](https://github.com/Pocco81/auto-save.nvim) - "<Leader>as" to toggle
+- [Pocco81/auto-save.nvim](https://github.com/Pocco81/auto-save.nvim) - "\<Leader\>as" to toggle
 
 #### File explorer / Finders
 
