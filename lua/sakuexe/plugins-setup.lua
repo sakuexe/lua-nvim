@@ -38,6 +38,8 @@ return packer.startup(function(use)
 	use("Shatur/neovim-ayu")
 	use("phanviet/vim-monokai-pro")
 	use("whatsthatsmell/codesmell_dark.vim")
+	use({ "catppuccin/nvim", as = "catppuccin" })
+	use("JoosepAlviste/palenightfall.nvim")
 	use("xiyaowong/nvim-transparent")
 
 	-- Essential nvim plugins

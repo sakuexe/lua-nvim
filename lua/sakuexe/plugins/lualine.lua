@@ -6,7 +6,7 @@ if not status then
 	return
 end
 
-local lualine_ayu = require("lualine.themes.ayu")
+local lualine_palenight = require("lualine.themes.palenight")
 
 local my_colors = {
 	orange = "#c47443",
@@ -20,16 +20,17 @@ local my_colors = {
 	white = "#dedede",
 	darkgray = "#2e2c30",
 	lightgray = "#626063",
+	pastel_pinkviolet = "#c393eb",
 	transparent = "00000000",
 }
 
-lualine_ayu.normal.a.bg = my_colors.orange
-lualine_ayu.insert.a.bg = my_colors.lavender
-lualine_ayu.visual.a.bg = my_colors.violet
-lualine_ayu.replace.a.bg = my_colors.red
-lualine_ayu.normal.c.bg = my_colors.transparent
+-- lualine_palenight.normal.a.bg = my_colors.orange
+-- lualine_palenight.insert.a.bg = my_colors.lavender
+-- lualine_palenight.visual.a.bg = my_colors.violet
+-- lualine_palenight.replace.a.bg = my_colors.red
+lualine_palenight.normal.c.bg = my_colors.transparent
 
-lualine_ayu.command = {
+lualine_palenight.command = {
 	a = {
 		gui = "bold",
 		bg = my_colors.green,
@@ -39,10 +40,10 @@ lualine_ayu.command = {
 
 lualine.setup({
 	options = {
-		theme = lualine_ayu,
+		theme = lualine_palenight,
 		component_separators = { left = "", right = "" },
 		section_separators = { left = "", right = "" },
-		--    
+		--     
 	},
 
 	sections = {
@@ -68,8 +69,8 @@ lualine.setup({
 			{
 				"buffers",
 				buffers_color = {
-					active = { bg = my_colors.darkgray, fg = my_colors.white },
-					inactive = { bg = my_colors.black, fg = my_colors.lightgray },
+					-- active = { bg = my_colors.darkgray, fg = my_colors.white },
+					inactive = { bg = my_colors.transparent, fg = my_colors.pastel_pinkviolet },
 				},
 			},
 		},

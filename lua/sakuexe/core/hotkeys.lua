@@ -25,10 +25,10 @@ nnoremap("<leader>w", "<C-w>")
 -- setxkbmap -option caps:swapescape
 
 -- Set ALT+movement keys to resize window
-nnoremap("<M-j>", ":resize +1<CR>")
-nnoremap("<M-k>", ":resize -1<CR>")
-nnoremap("<M-h>", ":vertical resize +1<CR>")
-nnoremap("<M-l>", ":vertical resize -1<CR>")
+nnoremap("<M-k>", ":resize +1<CR>")
+nnoremap("<M-j>", ":resize -1<CR>")
+nnoremap("<M-l>", ":vertical resize +1<CR>")
+nnoremap("<M-h>", ":vertical resize -1<CR>")
 
 -- Better indenting - Doesn't remove visual mode when indenting
 vnoremap("<", "<gv")

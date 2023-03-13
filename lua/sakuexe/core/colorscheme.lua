@@ -1,4 +1,4 @@
-local status, _ = pcall(vim.cmd, "colorscheme ayu-dark")
+local status, _ = pcall(vim.cmd, "colorscheme palenightfall")
 if not status then
 	print("Colorscheme not found")
 	return
@@ -13,3 +13,7 @@ end
 transparent.setup({
 	enable = true,
 })
+
+if vim.fn.has("termguicolors") then
+	vim.opt.termguicolors = true
+end
