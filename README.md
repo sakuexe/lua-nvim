@@ -15,9 +15,13 @@ REQUIRED DEPENDENCIES:
 
 Recommended Dependencies
 
-- Zip ( for Lua LSP )
 - RipGrep ( Telescope FuzzyFinder)
-- Cc ( C-compiler for treesitter )
+- gcc ( C-compiler for treesitter )
+- g++ ( Another C compiler for LSP )
+
+```bash
+sudo apt install git ripgrep gcc g++
+```
 
 **1.) Install latest neovim appimage**
 
