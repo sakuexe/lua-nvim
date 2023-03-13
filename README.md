@@ -18,9 +18,10 @@ Recommended Dependencies
 - RipGrep ( Telescope FuzzyFinder)
 - gcc ( C-compiler for treesitter )
 - g++ ( Another C compiler for LSP )
+- make ( for native fzf to work )
 
 ```bash
-sudo apt install git ripgrep gcc g++
+sudo apt install git ripgrep gcc g++ make
 ```
 
 **1.) Install latest neovim appimage**
