@@ -15,7 +15,6 @@ REQUIRED DEPENDENCIES:
 
 Recommended Dependencies
 
-- Zip ( for Lua LSP )
 - RipGrep ( Telescope FuzzyFinder)
 - Cc ( C-compiler for treesitter )
 
