@@ -100,6 +100,9 @@ return packer.startup(function(use)
 	-- git-signs plugin
 	use("lewis6991/gitsigns.nvim")
 
+	-- Automatic saving (like in VSCode)
+	use("Pocco81/auto-save.nvim")
+
 	-- Better terminal for Neovim
 	use({
 		"akinsho/toggleterm.nvim",

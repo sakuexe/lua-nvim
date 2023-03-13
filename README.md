@@ -63,23 +63,26 @@ mv nvim.lua nvim
 
 - [wbthomason/packer.nvim](https://github.com/wbthomason/packer.nvim)
 
-#### Other plugins' dependency
+### Other plugins' dependency
 
 - [nvim-lua/plenary.nvim](https://github.com/nvim-lua/plenary.nvim)
 
-#### Colorschemes I enjoy
+### Colorschemes I enjoy
 
 - [Shatur/neovim-ayu](https://github.com/Shatur/neovim-ayu)
 - [phanviet/vim-monokai-pro](https://github.com/phanviet/vim-monokai-pro)
 - [whatsthatsmell/codesmell_dark.vim](https://github.com/whatsthatsmell/codesmell_dark.vim)
-- [xiyaowong/nvim-transparent](https://github.com/xiyaowong/nvim-transparent) ( Enables transparency )
+- [catppuccin/nvim](https://github.com/catppuccin/nvim)
+- [JoosepAlviste/palenightfall.nvim](https://github.com/JoosepAlviste/palenightfall.nvim) - Currently using
+- [xiyaowong/nvim-transparent](https://github.com/xiyaowong/nvim-transparent) - Enables transparency
 
 #### Neovim essentials
 
 - [tpope/vim-surround](https://github.com/tpope/vim-surround) - "ys", "ds" and "cs"
 - [tpope/vim-commentary](https://github.com/tpope/vim-commentary) - "gc" or "gcc"
-- [windwp/nvim-autopairs](https://github.com/windwp/nvim-autopairs)
+- [windwp/nvim-utopairs](https://github.com/windwp/nvim-autopairs)
 - [windwp/nvim-ts-autotag](https://github.com/windwp/nvim-ts-autotag)
+- [Pocco81/auto-save.nvim](https://github.com/Pocco81/auto-save.nvim) - "<Leader>as" to toggle
 
 #### File explorer / Finders
 
@@ -136,3 +139,16 @@ mv nvim.lua nvim
 #### Integrated Terminal
 
 - [akinsho/toggleterm.nvim](https://github.com/lewis6991/gitsigns.nvim) - Better integrated terminal
+
+## **Miscellaneous**
+
+#### Live Server - npm plugin
+
+- [www.chiarulli.me/Neovim/20-live-server](https://www.chiarulli.me/Neovim/20-live-server/) - For automatically refreshing the browser
+
+```bash
+npm install -g live-server
+# preview a folder
+live-server some-directory/
+# or a singular file
+```
