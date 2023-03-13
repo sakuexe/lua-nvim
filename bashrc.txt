@@ -1,0 +1,13 @@
+# custom aliases
+alias nvim="~/neovim/nvim.appimage"
+alias vi="nvim"
+alias viconf="cd ~/.config/nvim"
+alias initlua="nvim ~/.config/nvim/init.lua"
+
+# custom functions
+mkcdir ()
+{
+		mkdir "$1" &&
+				cd "$1"
+}
+
