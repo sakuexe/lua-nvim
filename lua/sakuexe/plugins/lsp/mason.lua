@@ -25,6 +25,7 @@ mason_lspconfig.setup({
 		"jsonls",
 		"pyright",
 		"vimls",
+		"emmet_ls",
 	},
 	-- auto-install configured LSP's (with lspconfig)
 	automatic_installation = true,
