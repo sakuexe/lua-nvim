@@ -135,10 +135,15 @@ mv nvim.lua nvim
 #### Git
 
 - [lewis6991/gitsigns.nvim](https://github.com/lewis6991/gitsigns.nvim) - Shows Git color-coded lines on the left side
+- [tpope/vim-fugitive](https://github.com/tpope/vim-fugitive) - Git tool for Nvim
 
 #### Integrated Terminal
 
 - [akinsho/toggleterm.nvim](https://github.com/lewis6991/gitsigns.nvim) - Better integrated terminal
+
+#### Undo tree
+
+- [mbbill/undotree](https://github.com/mbbill/undotree) - Visualize undo history and switch between old undos
 
 ## **Miscellaneous**
 

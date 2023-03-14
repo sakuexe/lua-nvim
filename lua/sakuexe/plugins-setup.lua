@@ -88,7 +88,7 @@ return packer.startup(function(use)
 	use("saadparwaiz1/cmp_luasnip")
 	use("rafamadriz/friendly-snippets")
 
-	-- treesitter
+	-- Treesitter
 	use({
 		"nvim-treesitter/nvim-treesitter",
 		run = function()
@@ -97,8 +97,12 @@ return packer.startup(function(use)
 		end,
 	})
 
-	-- git-signs plugin
+	-- Git plugins
 	use("lewis6991/gitsigns.nvim")
+	use("tpope/vim-fugitive")
+
+	-- Undo tree
+	use("mbbill/undotree")
 
 	-- Automatic saving (like in VSCode)
 	use("Pocco81/auto-save.nvim")

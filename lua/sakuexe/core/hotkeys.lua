@@ -7,22 +7,30 @@ local tnoremap = require("sakuexe.core.keymaphelp").tnoremap
 -- Assign <Leader> key
 vim.g.mapleader = " "
 
--- Exit insert mode without pressing CTRL-CEscape
+-- Exit insert mode without pressing CTRL-C || Escape
 inoremap("kj", "<Esc>")
 inoremap("jk", "<Esc>")
 
--- Remove search highlighting with CTRL-N
+-- Remove search highlighting with Space-nh
 nnoremap("<Leader>nh", ":nohlsearch<CR>")
 
 -- Set space-tab to move between buffers
 nnoremap("<Leader><Tab>", ":bnext<CR>")
 nnoremap("<Leader><S-Tab>", ":bprev<CR>")
 
+-- Also be able to move between buffers with CTRL-l && CTRL-h
+nnoremap("<C-l>", ":bnext<CR>")
+nnoremap("<C-h>", ":bprev<CR>")
+
+-- Move lines that are selected with J and K
+vnoremap("J", ":m '>+1<CR>gv=gv")
+vnoremap("K", ":m '<-2<CR>gv=gv")
+
+-- When moving lines with J, keep cursor in place
+nnoremap("J", "mzJ`z")
+
 -- Set space-w to work as CTRL-w
 nnoremap("<leader>w", "<C-w>")
-
--- swap esc and capslock:
--- setxkbmap -option caps:swapescape
 
 -- Set ALT+movement keys to resize window
 nnoremap("<M-k>", ":resize +1<CR>")
@@ -34,9 +42,15 @@ nnoremap("<M-h>", ":vertical resize -1<CR>")
 vnoremap("<", "<gv")
 vnoremap(">", ">gv")
 
--- Incredible keymaps, pastes and removes text without putting it in clipboard
+-- Incredible keymaps, pastes and removes text without putting
+-- the text it replaces in clipboard
 xnoremap("<leader>p", '"_dP')
 nnoremap("x", '"_x')
+
+-- Press Space-y to yoink text into system clipboard
+nnoremap("<leader>y", '"+y')
+nnoremap("<leader>Y", '"+Y')
+vnoremap("<leader>y", '"+y')
 
 -- Increases/Decreases numbers incrementally
 nnoremap("<leader>+", "<C-a>")
@@ -48,8 +62,20 @@ nnoremap("<leader>sh", "<C-w>s") -- split horizontally
 nnoremap("<leader>se", "<C-w>=") -- make splits equal width
 nnoremap("<leader>sx", ":close<CR>") -- close current split
 
--- Buffer stuff
+-- Make half page jumping keep cursor in the center
+nnoremap("<C-d>", "<C-d>zz")
+nnoremap("<C-u>", "<C-u>zz")
+
+-- When jumping to search terms, keep the term in the middle
+nnoremap("n", "nzzzv")
+nnoremap("N", "Nzzzv")
+
+-- Delete buffer with Space-bd
 nnoremap("<leader>bd", ":bd<CR>")
+
+-- Start replacing the current word you are hovering over
+-- Very very lovely
+nnoremap("<leader>s", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]])
 
 -- <[ Plugin Keymaps ]> --
 
@@ -62,6 +88,12 @@ nnoremap("<leader>fg", ":Telescope live_grep<CR>")
 nnoremap("<leader>fc", ":Telescope grep_string<CR>")
 nnoremap("<leader>fb", ":Telescope buffers<CR>")
 nnoremap("<leader>fh", ":Telescope help_tags<CR>")
+
+-- Undotree toggle
+nnoremap("<leader>u", ":UndotreeToggle<CR>")
+
+-- Git fugitive
+nnoremap("<leader>gs", ":Git<CR>")
 
 -- ToggleTerminal
 tnoremap("<Esc>", "<C-\\><C-n>:q!<CR>") -- quit terminal
