@@ -4,15 +4,11 @@ if not status then
 	return
 end
 
-local transparent_status, transparent = pcall(require, "transparent")
-if not transparent_status then
-	print("Transparency plugin not found")
+local status_transparent, _ = pcall(vim.cmd, "TransparentEnable")
+if status_transparent then
+	print("Running :TransparentEnable")
 	return
 end
-
-transparent.setup({
-	enable = true,
-})
 
 if vim.fn.has("termguicolors") then
 	vim.opt.termguicolors = true

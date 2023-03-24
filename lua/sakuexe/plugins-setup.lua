@@ -63,6 +63,28 @@ return packer.startup(function(use)
 	-- Icons
 	use("nvim-tree/nvim-web-devicons")
 
+	-- Git plugins
+	use("lewis6991/gitsigns.nvim")
+	use("tpope/vim-fugitive")
+
+	-- Undo tree
+	use("mbbill/undotree")
+
+	-- Automatic saving (like in VSCode)
+	use("Pocco81/auto-save.nvim")
+
+	-- Better comment highlighting
+	use("Djancyp/better-comments.nvim")
+
+	-- Better terminal for Neovim
+	use({
+		"akinsho/toggleterm.nvim",
+		tag = "*",
+		config = function()
+			require("toggleterm").setup()
+		end,
+	})
+
 	-- Autocompletion
 	use("hrsh7th/nvim-cmp")
 	use("hrsh7th/cmp-buffer")
@@ -94,25 +116,6 @@ return packer.startup(function(use)
 		run = function()
 			local ts_update = require("nvim-treesitter.install").update({ with_sync = true })
 			ts_update()
-		end,
-	})
-
-	-- Git plugins
-	use("lewis6991/gitsigns.nvim")
-	use("tpope/vim-fugitive")
-
-	-- Undo tree
-	use("mbbill/undotree")
-
-	-- Automatic saving (like in VSCode)
-	use("Pocco81/auto-save.nvim")
-
-	-- Better terminal for Neovim
-	use({
-		"akinsho/toggleterm.nvim",
-		tag = "*",
-		config = function()
-			require("toggleterm").setup()
 		end,
 	})
 
