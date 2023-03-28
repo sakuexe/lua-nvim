@@ -116,6 +116,9 @@ return packer.startup(function(use)
 		end,
 	})
 
+	-- github copilot
+	use("github/copilot.vim")
+
 	-- django plus
 	use("tweekmonster/django-plus.vim")
 
