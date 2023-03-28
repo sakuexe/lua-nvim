@@ -116,6 +116,9 @@ return packer.startup(function(use)
 		end,
 	})
 
+	-- django plus
+	use("tweekmonster/django-plus.vim")
+
 	if packer_bootstrap then
 		require("packer").sync()
 	end

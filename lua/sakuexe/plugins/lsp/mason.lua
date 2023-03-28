@@ -39,7 +39,7 @@ mason_null_ls.setup({
 		"stylua",
 		-- linters
 		"eslint_d", -- for javascript, typescript and jsframeworks
-		"djlint",
-		"autopep8",
+		"djlint", -- for django
+		"autopep8", -- for python pep8
 	},
 })
