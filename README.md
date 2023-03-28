@@ -19,9 +19,10 @@ Recommended Dependencies
 - gcc ( C-compiler for treesitter )
 - g++ ( Another C compiler for LSP )
 - make ( for native fzf to work )
+- python3.8-venv ( for python/django linting to work )
 
 ```bash
-sudo apt install git ripgrep gcc g++ make
+sudo apt install git ripgrep gcc g++ make python3.8-venv
 ```
 
 **1.) Install latest neovim appimage**

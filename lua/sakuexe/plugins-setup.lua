@@ -73,9 +73,6 @@ return packer.startup(function(use)
 	-- Automatic saving (like in VSCode)
 	use("Pocco81/auto-save.nvim")
 
-	-- Better comment highlighting
-	use("Djancyp/better-comments.nvim")
-
 	-- Better terminal for Neovim
 	use({
 		"akinsho/toggleterm.nvim",
