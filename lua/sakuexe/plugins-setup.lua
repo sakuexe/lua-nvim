@@ -37,7 +37,6 @@ return packer.startup(function(use)
 	-- Colorschemes
 	use("Shatur/neovim-ayu")
 	use("phanviet/vim-monokai-pro")
-	use("whatsthatsmell/codesmell_dark.vim")
 	use({ "catppuccin/nvim", as = "catppuccin" })
 	use("JoosepAlviste/palenightfall.nvim")
 	use("xiyaowong/nvim-transparent")
@@ -65,7 +64,7 @@ return packer.startup(function(use)
 
 	-- Git plugins
 	use("lewis6991/gitsigns.nvim")
-	use("tpope/vim-fugitive")
+	-- use("tpope/vim-fugitive")
 
 	-- Undo tree
 	use("mbbill/undotree")

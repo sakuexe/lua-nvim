@@ -41,9 +41,10 @@ lualine_palenight.command = {
 lualine.setup({
 	options = {
 		theme = lualine_palenight,
-		component_separators = { left = "", right = "" },
-		section_separators = { left = "", right = "" },
-		--     
+		component_separators = { left = "", right = "" },
+		section_separators = { left = "", right = "" },
+		--          ⮀ ⮂ ⮁ ⮃   
+		--  
 	},
 
 	sections = {
