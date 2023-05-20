@@ -11,6 +11,9 @@ vim.g.mapleader = " "
 inoremap("kj", "<Esc>")
 inoremap("jk", "<Esc>")
 
+-- reload nvim with f5
+nnoremap("<F5>", ":luafile %<CR>")
+
 -- Remove search highlighting with Space-nh
 nnoremap("<Leader>nh", ":nohlsearch<CR>")
 
@@ -73,9 +76,9 @@ nnoremap("N", "Nzzzv")
 -- Delete buffer with Space-bd
 nnoremap("<leader>bd", ":bd<CR>")
 
--- Start replacing the current word you are hovering over
--- Very very lovely
-nnoremap("<leader>s", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]])
+-- Start replacing the current word you are hovering over Very very lovely.
+-- You can also use the lspsaga version with <leader>rn
+nnoremap("<leader>sr", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]])
 
 -- <[ Plugin Keymaps ]> --
 

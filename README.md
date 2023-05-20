@@ -19,7 +19,7 @@ Recommended Dependencies
 - gcc ( C-compiler for treesitter )
 - g++ ( Another C compiler for LSP )
 - make ( for native fzf to work )
-- python3.8-venv ( for python/django linting to work )
+- python3.8-venv ( for autopep8/django linting/formatting to work )
 
 ```bash
 sudo apt install git ripgrep gcc g++ make python3.8-venv
@@ -33,13 +33,10 @@ sudo apt install git ripgrep gcc g++ make python3.8-venv
 # Download nvim.appimage from the link above
 chmod u+x nvim.appimage
 ./nvim.appimage
-```
-
-If ./nvim.appimage doesn't work:
-
-```bash
-./nvim.appimage --appimage-extract
-./squashfs-root/AppRun --version
+# OPTIONAL: Expose neovim globally
+sudo mkdir /neovim && sudo mv nvim.appimage /neovim
+sudo ln -s /neovim/nvim.appimage /usr/bin/nvim
+nvim
 ```
 
 **2.) Make a directory for the config files, if not already in place**
@@ -70,8 +67,6 @@ mv nvim.lua nvim
 
 ### Colorschemes I enjoy
 
-- [Shatur/neovim-ayu](https://github.com/Shatur/neovim-ayu)
-- [phanviet/vim-monokai-pro](https://github.com/phanviet/vim-monokai-pro)
 - [whatsthatsmell/codesmell_dark.vim](https://github.com/whatsthatsmell/codesmell_dark.vim)
 - [catppuccin/nvim](https://github.com/catppuccin/nvim)
 - [JoosepAlviste/palenightfall.nvim](https://github.com/JoosepAlviste/palenightfall.nvim) - Currently using
@@ -117,6 +112,7 @@ mv nvim.lua nvim
 - [glepnir/lspsaga.nvim](https://github.com/glepnir/lspsaga.nvim) - Enhanced UI
 - [jose-elias-alvarez/typescript.nvim](https://github.com/jose-elias-alvarez/typescript.nvim)
 - [onsails/lspkind.nvim](https://github.com/onsails/lspkind.nvim) - VsCode like icons for autocompletion
+- [github/copilot.nvim](https://github.com/github/copilot.vim) - Github Copilot integration
 
 #### Formatting and linting
 
@@ -136,7 +132,7 @@ mv nvim.lua nvim
 #### Git
 
 - [lewis6991/gitsigns.nvim](https://github.com/lewis6991/gitsigns.nvim) - Shows Git color-coded lines on the left side
-- [tpope/vim-fugitive](https://github.com/tpope/vim-fugitive) - Git tool for Nvim
+<!-- - [tpope/vim-fugitive](https://github.com/tpope/vim-fugitive) - Git tool for Nvim -->
 
 #### Integrated Terminal
 
@@ -148,7 +144,7 @@ mv nvim.lua nvim
 
 ## **Miscellaneous**
 
-#### Live Server - npm plugin
+#### Live Server - npm package for live-server esque functionality
 
 - [www.chiarulli.me/Neovim/20-live-server](https://www.chiarulli.me/Neovim/20-live-server/) - For automatically refreshing the browser
 
