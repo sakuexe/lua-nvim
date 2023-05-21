@@ -48,4 +48,4 @@ opt.splitbelow = true
 -- Nvim now counts - as part of a word
 opt.iskeyword:append("-")
 
-opt.cmdheight = 2
+opt.cmdheight = 0

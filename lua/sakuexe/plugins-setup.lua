@@ -72,15 +72,6 @@ return packer.startup(function(use)
 	-- Automatic saving (like in VSCode)
 	use("Pocco81/auto-save.nvim")
 
-	-- Better terminal for Neovim
-	use({
-		"akinsho/toggleterm.nvim",
-		tag = "*",
-		config = function()
-			require("toggleterm").setup()
-		end,
-	})
-
 	-- Autocompletion
 	use("hrsh7th/nvim-cmp")
 	use("hrsh7th/cmp-buffer")
@@ -114,6 +105,9 @@ return packer.startup(function(use)
 			ts_update()
 		end,
 	})
+
+	-- Tmux compability
+	use("christoomey/vim-tmux-navigator")
 
 	-- github copilot
 	use("github/copilot.vim")
