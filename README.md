@@ -1,10 +1,13 @@
-# **My Neovim config**
+# **THIS REPOSITORY IS DEPRECATED**
 
-This repository includes the configuration files needed for my
-Neovim setup.
+My current neovim configurations can be found [here](https://github.com/sakuexe/.dotfiles/tree/main/nvim)
+Inside of my [.dotfiles](https://github.com/sakuexe/.dotfiles) repository.
 
-It is recommended to use this as a base for your own Neovim configuration instead
-of just blindly copying it.
+*Deprecated since 23rd of May 2023*
+
+You can still use this version of my configuration if you feel like it, but I wouldn't reccomend it.
+
+<hr>
 
 ## **Installation notes**
 
